@@ -1,13 +1,12 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: #171717;
+  --background-primary: #ffffff;
+  --background-secondary: #171717;
 }
 
 html,
@@ -17,11 +16,9 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-primary);
+  background: var(--background-primary);
+  padding-top: 80px; /* Compensar el navbar fijo */
 }
 
 * {
@@ -35,8 +32,3 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
