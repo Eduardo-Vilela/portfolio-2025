@@ -1,0 +1,54 @@
+.custom-button {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-family: var(--font-outfit);
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+    border: none;
+
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--clr);
+    color: #fff;
+    border-radius: 10rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+/* Variantes */
+.custom-button.primary {
+    background-color: var(--background-secondary);
+    color: var(--color-primary);
+}
+
+.custom-button.secondary {
+    background-color: var(--background-primary);
+    color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+}
+
+/* Hover opcional */
+.custom-button.primary:hover {
+    background-color: var(---background-primary);
+    border: 1px solid var(--color-secondary);
+    color: var(--background-secondary);
+}
+
+.custom-button.secondary:hover {
+    background-color: var(--background-secondary);
+    border: 1px solid var(--color-secondary);
+    color: var(--background-primary);
+}

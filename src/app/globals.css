@@ -1,12 +1,40 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+/* Aquire Font Family */
+@font-face {
+  font-family: 'Aquire';
+  src: url('/font/AquireLight-YzE0o.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aquire';
+  src: url('/font/Aquire-BW0ox.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aquire';
+  src: url('/font/AquireBold-8Ma60.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 :root {
   --color-primary: #ffffff;
   --color-secondary: #171717;
   --background-primary: #ffffff;
   --background-secondary: #171717;
+  --font-aquire: 'Aquire', sans-serif;
+  --font-aquire-light: 'Aquire', sans-serif;
+  --font-aquire-regular: 'Aquire', sans-serif;
+  --font-aquire-bold: 'Aquire', sans-serif;
+  --font-outfit: var(--font-outfit), sans-serif;
 }
 
 html,
@@ -18,7 +46,8 @@ body {
 body {
   color: var(--color-primary);
   background: var(--background-primary);
-  padding-top: 80px; /* Compensar el navbar fijo */
+  font-family: var(--font-outfit) !important;
+  font-weight: 400;
 }
 
 * {
@@ -32,3 +61,74 @@ a {
   text-decoration: none;
 }
 
+/* Aquire Font Classes */
+.font-aquire {
+  font-family: var(--font-aquire);
+}
+
+.font-aquire-light {
+  font-family: var(--font-aquire-light);
+  font-weight: 300;
+}
+
+.font-aquire-regular {
+  font-family: var(--font-aquire-regular);
+  font-weight: 400;
+}
+
+.font-aquire-medium {
+  font-family: var(--font-aquire-regular);
+  font-weight: 500;
+}
+
+.font-aquire-bold {
+  font-family: var(--font-aquire-bold);
+  font-weight: 700;
+}
+
+/* Outfit Font Classes */
+.font-outfit {
+  font-family: var(--font-outfit);
+}
+
+.font-outfit-light {
+  font-family: var(--font-outfit);
+  font-weight: 300;
+}
+
+.font-outfit-regular {
+  font-family: var(--font-outfit);
+  font-weight: 400;
+}
+
+.font-outfit-medium {
+  font-family: var(--font-outfit);
+  font-weight: 500;
+}
+
+.font-outfit-semibold {
+  font-family: var(--font-outfit);
+  font-weight: 600;
+}
+
+.font-outfit-bold {
+  font-family: var(--font-outfit);
+  font-weight: 700;
+}
+
+.outlined-text {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
+}
+
+@media (width < 576px) {
+}
+
+@media (width <= 768px) {}
+
+@media (width > 992px) {}
+
+@media (width >= 1200px) {}
+
+@media (768px <= width <= 992px) {}

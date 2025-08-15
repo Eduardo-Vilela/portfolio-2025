@@ -1,34 +1,41 @@
-import type { Metadata } from "next";
+'use client';
+
 import "./globals.css";
-import { Geist, Geist_Mono } from "next/font/google";
+import { metadata } from '@/types/metadata';
+import { Outfit } from 'next/font/google';
 import { Header } from './components/layout/Header';
 
 // Importing the Bootstrap CSS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// Configurar Outfit de Google Fonts
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-outfit',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
 
-export const metadata: Metadata = {
-  title: "Portfolio - Full Stack Developer",
-  description: "Portfolio profesional de desarrollo web full-stack",
-};
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+    AOS.refresh();
+  }, []);
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
   return (
     <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <head>
+        <title>{metadata.title as string}</title>
+        <meta name="description" content={metadata.description as string} />
+      </head>
+      <body className={outfit.variable}>
         <Header />
         {children}
       </body>

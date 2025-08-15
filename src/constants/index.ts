@@ -12,6 +12,16 @@ export const PERSONAL_INFO = {
   twitter: 'https://twitter.com/tuusuario',
 };
 
+// About
+export const PERSONAL_ABOUT = {
+  title: 'About me',
+  context1: 'Hello! I’m Eduardo Vilela, a passionate and creative Frontend Developer dedicated to building engaging, responsive, and user-friendly web experiences. With a fresh perspective and a strong attention to detail, I bring both technical skill and creative vision to every project I work on.',
+  context2:'I have honed my skills in HTML, CSS, JavaScript, and modern frontend frameworks, alongside an understanding of UI/UX principles. I’m excited to transform ideas into interactive, visually appealing, and accessible interfaces that deliver seamless digital experiences.',
+  about: 'Desarrollador apasionado por crear soluciones digitales innovadoras...',
+  aboutImage:'/images/about1.png'
+};
+
+
 // Navegación
 export const NAVIGATION = [
   { name: 'Inicio', href: '/' },
@@ -21,13 +31,64 @@ export const NAVIGATION = [
 ];
 
 // Proyectos de ejemplo
-export const PROJECTS: Project[] = [
+export const WORKS: Project[] = [
+  
   {
     id: '1',
     title: 'E-commerce Platform',
     description: 'Plataforma completa de comercio electrónico con React y Node.js',
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    imageUrl: '/projects/ecommerce.jpg',
+    imageUrl: '/images/example.png',
+    githubUrl: 'https://github.com/tuusuario/ecommerce',
+    liveUrl: 'https://ecommerce-demo.com',
+    featured: true,
+  },
+  {
+    id: '2',
+    title: 'E-commerce Platform',
+    description: 'Plataforma completa de comercio electrónico con React y Node.js',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    imageUrl: '/images/example.png',
+    githubUrl: 'https://github.com/tuusuario/ecommerce',
+    liveUrl: 'https://ecommerce-demo.com',
+    featured: true,
+  },
+  {
+    id: '3',
+    title: 'E-commerce Platform',
+    description: 'Plataforma completa de comercio electrónico con React y Node.js',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    imageUrl: '/images/example.png',
+    githubUrl: 'https://github.com/tuusuario/ecommerce',
+    liveUrl: 'https://ecommerce-demo.com',
+    featured: true,
+  },
+  {
+    id: '4',
+    title: 'E-commerce Platform',
+    description: 'Plataforma completa de comercio electrónico con React y Node.js',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    imageUrl: '/images/example.png',
+    githubUrl: 'https://github.com/tuusuario/ecommerce',
+    liveUrl: 'https://ecommerce-demo.com',
+    featured: true,
+  },
+  {
+    id: '5',
+    title: 'E-commerce Platform',
+    description: 'Plataforma completa de comercio electrónico con React y Node.js',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    imageUrl: '/images/example.png',
+    githubUrl: 'https://github.com/tuusuario/ecommerce',
+    liveUrl: 'https://ecommerce-demo.com',
+    featured: true,
+  },
+  {
+    id: '6',
+    title: 'E-commerce Platform',
+    description: 'Plataforma completa de comercio electrónico con React y Node.js',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    imageUrl: '/images/example.png',
     githubUrl: 'https://github.com/tuusuario/ecommerce',
     liveUrl: 'https://ecommerce-demo.com',
     featured: true,

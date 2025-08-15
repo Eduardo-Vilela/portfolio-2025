@@ -17,7 +17,7 @@ export const Header = () => {
   });
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 100) {
+    if (latest > 80) {
       setIsResized(true);
     } else {
       setIsResized(false);
@@ -42,7 +42,7 @@ export const Header = () => {
           boxShadow: isResized
             ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
             : "none",
-          width: isResized ? "90%" : "100%",
+          width: isResized ? "70%" : "100%",
           paddingRight: isResized ? "12px" : "0px",
           paddingLeft: isResized ? "12px" : "0px",
           borderRadius: isResized ? "2rem" : "0px",
@@ -63,7 +63,7 @@ export const Header = () => {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'space-between',
-          backgroundColor: isResized ? 'rgba(255, 255, 255, 0.8)' : 'transparent',
+          // backgroundColor: isResized ? 'rgba(255, 255, 255, 0.8)' : 'transparent',
           padding: '0.5rem 0',
         }}
       >

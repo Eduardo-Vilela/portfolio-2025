@@ -1,4 +1,4 @@
-// Tipos principales del portfolio
+
 export interface Project {
   id: string;
   title: string;
