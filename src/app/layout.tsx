@@ -10,6 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from "./components/layout/Footer";
 
 // Configurar Outfit de Google Fonts
 const outfit = Outfit({
@@ -35,9 +36,10 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
         <title>{metadata.title as string}</title>
         <meta name="description" content={metadata.description as string} />
       </head>
-      <body className={outfit.variable}>
+      <body className={`${outfit.variable} w-100`}>
         <Header />
         {children}
+        <Footer/>
       </body>
     </html>
   );

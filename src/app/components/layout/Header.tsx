@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Button, Container, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'motion/react';
 import { NAVIGATION } from '@/constants';
+import '@/styles/header.css'
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +43,7 @@ export const Header = () => {
           boxShadow: isResized
             ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
             : "none",
-          width: isResized ? "70%" : "100%",
+          width: isResized ? "50%" : "100%",
           paddingRight: isResized ? "12px" : "0px",
           paddingLeft: isResized ? "12px" : "0px",
           borderRadius: isResized ? "2rem" : "0px",
@@ -70,12 +71,12 @@ export const Header = () => {
         <Navbar 
           expand="lg" 
           className="w-100"
-          style={{ background: 'transparent' }}
+          style={{ background: 'transparent', height: '50px' }}
         >
           <Container fluid className="px-0">
-            <Navbar.Brand href="/" className="text-2xl font-bold text-dark">
-              Portfolio
-            </Navbar.Brand>
+            {/* <Navbar.Brand href="/" className="text-2xl font-bold text-dark">
+              EV &lt;/&gt;
+            </Navbar.Brand> */}
             
             {/* Desktop Navigation - Centrada */}
             <motion.nav 
@@ -91,11 +92,11 @@ export const Header = () => {
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className="text-dark text-decoration-none fw-medium"
+                  className="text-decoration-none fw-medium items-nav-color"
                   style={{
                     fontSize: '1rem',
                     transition: 'all 0.3s ease',
-                    position: 'relative'
+                    position: 'relative',
                   }}
                   whileHover={{ 
                     scale: 1.05,
@@ -119,7 +120,7 @@ export const Header = () => {
             </motion.nav>
 
             {/* Desktop CTA Button */}
-            <motion.div className="d-none d-lg-block">
+            {/* <motion.div className="d-none d-lg-block">
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -131,9 +132,9 @@ export const Header = () => {
                   fontSize: '0.9rem'
                 }}
               >
-                Contactar
+                Descargar CV
               </motion.button>
-            </motion.div>
+            </motion.div> */}
             
             {/* Mobile Toggle Button */}
             <motion.button

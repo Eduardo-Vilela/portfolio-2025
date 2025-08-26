@@ -14,6 +14,10 @@
     padding-right: 3rem;
 }
 
+.about-box-left h1 , p{
+    color: var(--background-secondary);
+}
+
 .about-box-left h1 {
     font-size: clamp(18px, 40px, 5rem);
 }

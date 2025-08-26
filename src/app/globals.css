@@ -27,9 +27,9 @@
 
 :root {
   --color-primary: #ffffff;
-  --color-secondary: #171717;
+  --color-secondary: #0F3EAA;
   --background-primary: #ffffff;
-  --background-secondary: #171717;
+  --background-secondary: #0F3EAA;
   --font-aquire: 'Aquire', sans-serif;
   --font-aquire-light: 'Aquire', sans-serif;
   --font-aquire-regular: 'Aquire', sans-serif;
@@ -56,7 +56,7 @@ body {
   margin: 0;
 }
 
-a {
+a ,h1{
   color: inherit;
   text-decoration: none;
 }
@@ -118,8 +118,8 @@ a {
 
 .outlined-text {
   color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--color-secondary);
 }
 
 @media (width < 576px) {

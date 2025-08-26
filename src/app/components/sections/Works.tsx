@@ -3,20 +3,28 @@ import { WORKS } from '@/constants/index'
 import { Col, Container, Row } from 'react-bootstrap'
 import '@/styles/works.css'
 import CardWork from '../ui/CardWork'
+import CardWork2 from '../ui/CardWork2'
+import { Button } from '../ui/Button'
+import { FaArrowRightLong } from 'react-icons/fa6'
 
 function Works() {
+
+
   return (
     <Container className='works-container my-4'>
         <Row>
             <Col lg={12} className='works-box-top'>
-                <section>
+                <section className=''>
                     <h1>Selected works</h1>
                 </section>
-                <section className='d-flex flex-wrap gap-4'>
+                <section className='works-container-cards'>
                     {WORKS.map((work) => (
-                        <CardWork key={work.id} project={work}/>
+                        <CardWork2 key={work.id} project={work} />
                     ))}
                 </section>
+                <div className='w-100 d-flex flex-row justify-content-center mt-5'>
+                    <Button href="/contact" className=''>View All Works <FaArrowRightLong /></Button>
+                </div>
             </Col>
         </Row>
     </Container>
