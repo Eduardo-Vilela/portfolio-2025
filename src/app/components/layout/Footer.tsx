@@ -8,7 +8,7 @@ import Image from 'next/image'
 function Footer() {
   return (
     <Container fluid className='container-footer m-0'>
-      <Row className='w-100 h-100'>
+      <Row className='py-5'>
 
         {/* <Col lg={12} className='w-100 d-flex flex-row justify-content-center align-items-center'>
           <Button href='#' variant='secondary'>

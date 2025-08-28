@@ -11,6 +11,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./components/layout/Footer";
+import OffcanvasExample from "./components/layout/OffcanvasExample";
 
 // Configurar Outfit de Google Fonts
 const outfit = Outfit({
@@ -37,7 +38,8 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
         <meta name="description" content={metadata.description as string} />
       </head>
       <body className={`${outfit.variable} w-100`}>
-        <Header />
+        {/* <Header /> */}
+        <OffcanvasExample/>
         {children}
         <Footer/>
       </body>

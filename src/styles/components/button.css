@@ -55,3 +55,9 @@
 .custom-button :disabled{
     cursor: no-drop;
 }
+@media (max-width: 576px) {
+    .custom-button {
+        padding: 0.5rem ;
+        font-size: 14px;
+    }
+}

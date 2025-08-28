@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
-import { Button, Container, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap';
+import { useState, useRef } from 'react';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'motion/react';
 import { NAVIGATION } from '@/constants';
 import '@/styles/header.css'
@@ -13,7 +13,6 @@ export const Header = () => {
 
   // Usar motion para detectar scroll
   const { scrollY } = useScroll({
-    target: ref,
     offset: ["start start", "end start"],
   });
 
@@ -33,8 +32,9 @@ export const Header = () => {
         top: 0,
         left: 0,
         right: 0,
-        zIndex: 40,
-        width: '100%'
+        zIndex: 50,
+        width: '100%',
+        height: '8vh',
       }}
     >
       <motion.div
@@ -43,7 +43,8 @@ export const Header = () => {
           boxShadow: isResized
             ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
             : "none",
-          width: isResized ? "50%" : "100%",
+          // width: isResized ? "50%" : "100%",
+          height: isResized ? "80%" : "100%",
           paddingRight: isResized ? "12px" : "0px",
           paddingLeft: isResized ? "12px" : "0px",
           borderRadius: isResized ? "2rem" : "0px",
@@ -57,38 +58,37 @@ export const Header = () => {
         style={{
           position: 'relative',
           zIndex: 50,
-          margin: '0 auto',
-          display: 'flex',
           width: '100%',
-          maxWidth: 'calc(100vw - 2rem)',
+          height: '100%',
+          margin: 'auto',
+          padding: '0.5rem 0',
+          display: 'flex',
+          // maxWidth: 'calc(100vw - 2rem)',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'space-between',
           // backgroundColor: isResized ? 'rgba(255, 255, 255, 0.8)' : 'transparent',
-          padding: '0.5rem 0',
         }}
       >
         <Navbar 
           expand="lg" 
-          className="w-100"
-          style={{ background: 'transparent', height: '50px' }}
+          className="w-100 p-0"
+          style={{ height: '100%' }}
         >
-          <Container fluid className="px-0">
+          <Container fluid className='h-100 w-100'>
             {/* <Navbar.Brand href="/" className="text-2xl font-bold text-dark">
               EV &lt;/&gt;
             </Navbar.Brand> */}
-            
-            {/* Desktop Navigation - Centrada */}
             <motion.nav 
-              className="d-none d-lg-flex flex-row align-items-center justify-content-center"
-              style={{
-                position: 'absolute',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                gap: '2rem'
-              }}
+              className="d-none w-100 h-100 d-lg-flex flex-row align-items-center justify-content-center"
+              // style={{
+              //   position: 'absolute',
+              //   left: '50%',
+              //   transform: 'translateX(-50%)',
+              //   gap: '2rem'
+              // }}
             >
-              {NAVIGATION.map((item, index) => (
+              {NAVIGATION.map((item) => (
                 <motion.a
                   key={item.name}
                   href={item.href}
@@ -118,8 +118,6 @@ export const Header = () => {
                 </motion.a>
               ))}
             </motion.nav>
-
-            {/* Desktop CTA Button */}
             {/* <motion.div className="d-none d-lg-block">
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -197,7 +195,8 @@ export const Header = () => {
             }}
             exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40"
+            className="fixed inset-0"
+            style={{ zIndex: 1000 }}
             onClick={() => setIsMenuOpen(false)}
           />
         )}
@@ -221,14 +220,14 @@ export const Header = () => {
               duration: 0.5
             }}
             style={{
-              position: 'fixed',
+              position: 'absolute',
               right: 0,
               top: 0,
               height: '100vh',
               width: '100%',
               backgroundColor: 'white',
               boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-              zIndex: 50,
+              zIndex: 1001,
               overflow: 'hidden'
             }}
           >
@@ -238,6 +237,7 @@ export const Header = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
               className="d-flex justify-content-between align-items-center p-4 border-bottom"
+              style={{zIndex: '1'}}
             >
               <div className="d-flex align-items-center">
                 <div 

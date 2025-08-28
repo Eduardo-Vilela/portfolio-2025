@@ -27,9 +27,9 @@
 
 :root {
   --color-primary: #ffffff;
-  --color-secondary: #0F3EAA;
+  --color-secondary: black;
   --background-primary: #ffffff;
-  --background-secondary: #0F3EAA;
+  --background-secondary: black;
   --font-aquire: 'Aquire', sans-serif;
   --font-aquire-light: 'Aquire', sans-serif;
   --font-aquire-regular: 'Aquire', sans-serif;
@@ -45,7 +45,7 @@ body {
 
 body {
   color: var(--color-primary);
-  background: var(--background-primary);
+  background: var(--background-primary) !important;
   font-family: var(--font-outfit) !important;
   font-weight: 400;
 }
