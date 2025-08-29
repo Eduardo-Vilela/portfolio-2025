@@ -21,7 +21,7 @@ function Hero(){
           <Button data-aos="fade-up" data-aos-anchor-placement="top-bottom" href="/contact" variant='primary' className='mt-4'>{PERSONAL_INFO.buttonText}<FaArrowRightLong /></Button>
         </section>
         <Ballpit
-          count={100}
+          count={40}
           gravity={0.1}
           friction={1}
           wallBounce={0.95}
