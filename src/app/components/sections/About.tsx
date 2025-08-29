@@ -8,7 +8,7 @@ import { FaArrowRightLong } from 'react-icons/fa6'
 
 function About() {
   return (
-    <Container className='about-container'>
+    <Container className='about-container' id='sobreMi'>
         <Row>
             <Col lg={7} className='about-box-left py-4' data-aos="fade-up" data-aos-duration="3000">
                 <h1>{PERSONAL_ABOUT.title}</h1>

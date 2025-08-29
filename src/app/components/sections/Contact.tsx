@@ -1,17 +1,18 @@
 import React from 'react'
 import '@/styles/contact.css'
 import { Col, Container, Row } from 'react-bootstrap'
+import { PERSONAL_INFO } from '@/constants'
 
 function Contact() {
   return (
-    <Container fluid className='container-contact'>
+    <Container fluid className='container-contact' id='contacto'>
       <Row className='py-5'>
         <Col lg={12} className='col-contact'>
-          <h2 className='text-white'>Contact</h2>
+          <h2 className='text-white'>Contacto</h2>
           <h1 className='text-white'>Let’s rock with me</h1>
           <div className='box-info'>
-            <p className='text-white'>(+54) 221 - 6776051</p>
-            <p className='text-white'>eduardovilela22@gmail.com</p>
+            <p className='text-white'>{PERSONAL_INFO.phone}</p>
+            <p className='text-white'>{PERSONAL_INFO.email}</p>
           </div>
         </Col>
       </Row>

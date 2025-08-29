@@ -11,11 +11,11 @@ function Works() {
 
 
   return (
-    <Container className='works-container my-4'>
+    <Container className='works-container my-4' id='portfolio'>
         <Row>
             <Col lg={12} className='works-box-top'>
                 <section className=''>
-                    <h1>Selected works</h1>
+                    <h1>Portfolio</h1>
                 </section>
                 <section className='works-container-cards'>
                     {WORKS.map((work) => (
@@ -23,7 +23,7 @@ function Works() {
                     ))}
                 </section>
                 <div className='w-100 d-flex flex-row justify-content-center mt-5'>
-                    <Button href="/contact" className=''>View All Works <FaArrowRightLong /></Button>
+                    <Button href="/contact" className=''>Ver todos</Button>
                 </div>
             </Col>
         </Row>

@@ -1,30 +1,27 @@
 'use client';
 
 import { PERSONAL_INFO } from '@/constants';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import '@/styles/hero.css'
 import { Button } from '../ui/Button';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import Ballpit from '../../../../ReactBits/Ballpit/Ballpit';
-const items = Array.from({ length: 25 });
 function Hero(){
-  const { ref, isIntersecting } = useIntersectionObserver();
 
   return (
-    <Container fluid className='container-hero'>
+    <Container fluid className='container-hero' id='inicio'>
       <div className='hero-container'>
         <section className='hero-container-title'>
-          <h1 className="" data-aos="fade-right">Eduardo Vilela</h1>
-          <h2 className="outlined-text" data-aos="fade-left">FRONTEND DEVELOPER</h2>
+          <h1 className="" data-aos="fade-up" data-aos-anchor-placement="top-bottom">{PERSONAL_INFO.name}</h1>
+          <h2 className="outlined-text" data-aos="fade-up" data-aos-anchor-placement="top-bottom">{PERSONAL_INFO.title}</h2>
           <div className='d-flex flex-column gap-2 mt-4' data-aos="zoom-out-up">
-            <p className='m-0'>I design beautifully simple things and i love what i do.</p>
-            <p className='m-0'>Just simple like that!</p>
+            <p className='m-0' data-aos="fade-up" data-aos-anchor-placement="top-bottom">{PERSONAL_INFO.subtitle}</p>
+            <p className='m-0' data-aos="fade-up" data-aos-anchor-placement="top-bottom">{PERSONAL_INFO.subtitle2}</p>
           </div>
-          <Button href="/contact" variant='primary' data-aos="zoom-out-up" className='mt-4'>Let’s Talk <FaArrowRightLong /></Button>
+          <Button data-aos="fade-up" data-aos-anchor-placement="top-bottom" href="/contact" variant='primary' className='mt-4'>{PERSONAL_INFO.buttonText}<FaArrowRightLong /></Button>
         </section>
         <Ballpit
-          count={30}
+          count={100}
           gravity={0.1}
           friction={1}
           wallBounce={0.95}

@@ -1,34 +1,40 @@
-import { Project, Skill, Experience } from '@/types';
+import { Project, Skill } from '@/types';
+
+// Navegación
+export const NAVIGATION = [
+  { name: 'Inicio', href: '#inicio' },
+  { name: 'Sobre mí', href: '#sobreMi' },
+  { name: 'Portfolio', href: '#portfolio' },
+  { name: 'Contacto', href: '#contacto' },
+];
 
 // Información personal
 export const PERSONAL_INFO = {
-  name: 'Tu Nombre',
-  title: 'Full Stack Developer',
-  email: 'tu@email.com',
-  location: 'Ciudad, País',
-  about: 'Desarrollador apasionado por crear soluciones digitales innovadoras...',
-  github: 'https://github.com/tuusuario',
-  linkedin: 'https://linkedin.com/in/tuusuario',
-  twitter: 'https://twitter.com/tuusuario',
+  name: 'Eduardo Vilela',
+  title: 'FRONTEND DEVELOPER',
+  subtitle: 'I design beautifully simple things and I love what I do.',
+  subtitle2: 'Just simple like that!',
+  buttonText: 'Let’s Talk',
+  phone: '(+54) 221 - 6776051',
+  address: 'Calle Falsa 123, Ciudad, País',
+  email: 'eduardovilela22@gmail.com',
+  redes: [
+    { id: '1', name: 'github-icon', url: 'https://github.com/tuusuario' },
+    { id: '2', name: 'linkedin-icon', url: 'https://linkedin.com/in/tuusuario' },
+    { id: '4', name: 'instagram-icon', url: 'https://instagram.com/tuusuario' },
+    { id: '5', name: 'facebook', url: 'https://facebook.com/tuusuario' },
+    { id: '6', name: 'whatsapp-icon', url: 'https://whatsapp.com/tuusuario' },
+  ],
 };
 
 // About
 export const PERSONAL_ABOUT = {
-  title: 'About me',
-  context1: 'Hello! I’m Eduardo Vilela, a passionate and creative Frontend Developer dedicated to building engaging, responsive, and user-friendly web experiences. With a fresh perspective and a strong attention to detail, I bring both technical skill and creative vision to every project I work on.',
-  context2:'I have honed my skills in HTML, CSS, JavaScript, and modern frontend frameworks, alongside an understanding of UI/UX principles. I’m excited to transform ideas into interactive, visually appealing, and accessible interfaces that deliver seamless digital experiences.',
+  title: 'Acerca de mi',
+  context1: '¡Hola! Soy Eduardo Vilela, un desarrollador frontend apasionado y creativo, dedicado a crear experiencias web atractivas, responsivas y fáciles de usar. Con una perspectiva innovadora y una gran atención al detalle, aporto tanto habilidades técnicas como visión creativa a cada proyecto en el que trabajo.',
+  context2:'He perfeccionado mis habilidades en HTML, CSS, JavaScript y frameworks frontend modernos, además de comprender los principios de UI/UX. Me entusiasma transformar ideas en interfaces interactivas, visualmente atractivas y accesibles que ofrezcan experiencias digitales fluidas.',
   about: 'Desarrollador apasionado por crear soluciones digitales innovadoras...',
   aboutImage:'/images/about1.png'
 };
-
-
-// Navegación
-export const NAVIGATION = [
-  { name: 'Inicio', href: '/' },
-  { name: 'Sobre mí', href: '/about' },
-  { name: 'Proyectos', href: '/projects' },
-  { name: 'Contacto', href: '/contact' },
-];
 
 // Proyectos de ejemplo
 export const WORKS: Project[] = [

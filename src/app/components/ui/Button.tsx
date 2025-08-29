@@ -2,11 +2,12 @@ import '@/styles/components/button.css';
 import Link from 'next/link';
 
 interface ButtonProps {
-  href: string; // 🔥 Ahora es obligatorio
+  href: string;
   variant?: 'primary' | 'secondary';
   children: React.ReactNode;
   className?: string;
-  disabled?: boolean
+  disabled?: boolean;
+  download?: boolean;
 }
 
 export const Button = ({
@@ -14,9 +15,15 @@ export const Button = ({
   variant = 'primary',
   children,
   className = '',
+  download = false,
 }: ButtonProps) => {
   return (
-    <Link href={href} className={`custom-button ${variant} ${className}`} target="_blank">
+    <Link
+      href={href}
+      className={`custom-button ${variant} ${className}`}
+      target="_blank"
+      {...(download ? { download: true } : {})}
+    >
       {children}
     </Link>
   );

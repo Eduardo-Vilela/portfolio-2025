@@ -33,7 +33,7 @@ function CardWork2({ project }: CardWorkProps) {
             <div>
                 <Button
                     href={project.liveUrl ?? ""}
-                    variant='secondary'
+                    variant='primary'
                 >
                     <FaArrowRightLong />
                 </Button>

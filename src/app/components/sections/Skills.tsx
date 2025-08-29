@@ -33,12 +33,11 @@ const skills = [
 ]
 function Skills() {
   return (
-    <div className='container-skills'>
+    <div className='container-skills' id='habilidades'>
       <Container>
         <Row className='w-100 gap-2'>
           <Col lg={12} className='justify-content-center text-center my-3'>
-              <p>What I Do !</p>
-              <h1>My specialization And key skills</h1>
+              <h1>Mi especialización y habilidades clave</h1>
           </Col>
         </Row>
       </Container>

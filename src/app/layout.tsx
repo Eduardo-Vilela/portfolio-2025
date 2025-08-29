@@ -3,7 +3,7 @@
 import "./globals.css";
 import { metadata } from '@/types/metadata';
 import { Outfit } from 'next/font/google';
-import { Header } from './components/layout/Header';
+
 
 // Importing the Bootstrap CSS
 import AOS from 'aos';
@@ -11,7 +11,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./components/layout/Footer";
-import OffcanvasExample from "./components/layout/OffcanvasExample";
+import Header from "./components/layout/Header";
 
 // Configurar Outfit de Google Fonts
 const outfit = Outfit({
@@ -38,8 +38,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
         <meta name="description" content={metadata.description as string} />
       </head>
       <body className={`${outfit.variable} w-100`}>
-        {/* <Header /> */}
-        <OffcanvasExample/>
+        <Header/>
         {children}
         <Footer/>
       </body>
