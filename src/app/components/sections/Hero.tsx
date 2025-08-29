@@ -18,7 +18,14 @@ function Hero(){
             <p className='m-0' data-aos="fade-up" data-aos-anchor-placement="top-bottom">{PERSONAL_INFO.subtitle}</p>
             <p className='m-0' data-aos="fade-up" data-aos-anchor-placement="top-bottom">{PERSONAL_INFO.subtitle2}</p>
           </div>
-          <Button data-aos="fade-up" data-aos-anchor-placement="top-bottom" href="/contact" variant='primary' className='mt-4'>{PERSONAL_INFO.buttonText}<FaArrowRightLong /></Button>
+          <Button 
+          data-aos="fade-up" 
+          data-aos-anchor-placement="top-bottom" 
+          href="mailto:vilelaeduardo22@gmail.com?subject=Consulta&body=Hola,%20quiero%20más%20información"          
+          variant='primary' 
+          className='mt-4'>
+            {PERSONAL_INFO.buttonText}<FaArrowRightLong />
+          </Button>
         </section>
         <Ballpit
           count={40}
@@ -26,7 +33,6 @@ function Hero(){
           friction={1}
           wallBounce={0.95}
           followCursor={false}
-
         />
       </div>
     </Container>

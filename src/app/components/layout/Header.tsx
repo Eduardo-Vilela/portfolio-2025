@@ -13,7 +13,6 @@ function Header() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // 🔥 Detectar ancho de pantalla
     const handleResize = () => setIsMobile(window.innerWidth < 992);
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -21,7 +20,7 @@ function Header() {
   }, []);
   
   return (
-    <Navbar key={'lg'} expand={'lg'} className="bg-body-tertiary" fixed="top" style={{height: '8vh'}}>
+    <Navbar key={'lg'} expand={'lg'} className="bg-body-tertiary" fixed="top" style={{height: '8vh', boxShadow: 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px'}}>
       <Container fluid>
         <Navbar.Brand href="#" className='fw-bold'>Eduardo Vilela &lt;/&gt;</Navbar.Brand>
         <Navbar.Toggle onClick={() => setIsMenuOpen(!isMenuOpen)} />

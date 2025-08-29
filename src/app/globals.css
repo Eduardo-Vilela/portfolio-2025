@@ -122,6 +122,10 @@ a ,h1{
   -webkit-text-stroke-color: var(--color-secondary);
 }
 
+#portfolio, #about, #contact {
+  scroll-margin-top: 8vh;
+}
+
 @media (width < 576px) {
 }
 

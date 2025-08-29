@@ -17,11 +17,29 @@ export const Button = ({
   className = '',
   download = false,
 }: ButtonProps) => {
+  const isSpecialLink =
+    href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http');
+
+  if (isSpecialLink) {
+    // 🔹 Usa <a> nativo para mailto:, tel:, y URLs externas
+    return (
+      <a
+        href={href}
+        className={`custom-button ${variant} ${className}`}
+        target={href.startsWith('http') ? '_blank' : undefined}
+        rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+        {...(download ? { download: true } : {})}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  // 🔹 Usa Link solo para rutas internas
   return (
     <Link
       href={href}
       className={`custom-button ${variant} ${className}`}
-      target="_blank"
       {...(download ? { download: true } : {})}
     >
       {children}
