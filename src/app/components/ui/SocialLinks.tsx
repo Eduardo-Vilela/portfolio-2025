@@ -1,9 +1,26 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import '@/styles/components/socialLinks.css'
+import { BiLogoGmail } from 'react-icons/bi';
+import { MdContentCopy } from 'react-icons/md';
 
-function SocialLinks() {
+interface SocialLinksProps {
+  className?: string;
+}
+
+function SocialLinks({ className = "" }: SocialLinksProps) {
+  const [copied, setCopied] = useState(false);
+  const email = "tucorreo@email.com"; // Cambia por tu email
+
+  const handleCopyEmail = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    await navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
-    <div className="card">
+    <div className={`card ${className}`}>
         <a href="https://www.instagram.com/eduvilela17/" target="_blank" className="socialContainer containerOne">
         <svg className="socialSvg instagramSvg" viewBox="0 0 16 16">
             <path
@@ -32,8 +49,15 @@ function SocialLinks() {
             ></path>
         </svg>
         </a>
+        <span
+        className="socialContainer containerFive"
+        onClick={handleCopyEmail}
+        title="Copiar email"
+      >
+        {copied ? <div className='d-flex flex-column justify-content-center align-items-center'><MdContentCopy color='white'/><p className='text-white outline-none' style={{fontSize: '12px'}}>Copiado</p></div> : <BiLogoGmail color='white' className="socialSvg whatsappSvg"/>}
+      </span>
     </div>
-)
+  )
 }
 
 export default SocialLinks;

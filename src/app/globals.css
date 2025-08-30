@@ -126,6 +126,10 @@ a ,h1{
   scroll-margin-top: 8vh;
 }
 
+.swiper-button-prev, .swiper-button-next{
+  color: var(--color-secondary) !important;
+}
+
 @media (width < 576px) {
 }
 

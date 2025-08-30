@@ -15,7 +15,7 @@
 .socialContainer {
   width: 52px;
   height: 52px;
-  background-color: rgb(44, 44, 44);
+  background-color: var(--background-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,6 +47,13 @@
 /* Whatsapp*/
 .containerFour:hover {
   background-color: #25d366;
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  border-radius: 15px;
+}
+/* Email*/
+.containerFive:hover {
+  background-color: #D94334;
   transition-duration: 0.3s;
   transform: scale(1.5);
   border-radius: 15px;

@@ -12,12 +12,13 @@ export const NAVIGATION = [
 export const PERSONAL_INFO = {
   name: 'Eduardo Vilela',
   title: 'FRONTEND DEVELOPER',
-  subtitle: 'I design beautifully simple things and I love what I do.',
-  subtitle2: 'Just simple like that!',
+  subtitle: 'Transformo ideas en experiencias web atractivas.',
+  subtitle2: '¡Así de simple!',
   buttonText: 'Hablemos',
   phone: '(+54) 221 - 6776051',
   address: 'Calle Falsa 123, Ciudad, País',
   email: 'eduardovilela22@gmail.com',
+  location: 'La Plata, Buenos Aires, Argentina',
   redes: [
     { id: '1', name: 'github-icon', url: 'https://github.com/tuusuario' },
     { id: '2', name: 'linkedin-icon', url: 'https://linkedin.com/in/tuusuario' },
