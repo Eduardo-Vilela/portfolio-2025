@@ -22,6 +22,7 @@
   overflow: hidden;
   transition-duration: 0.3s;
   border-radius: 15px;
+  cursor: pointer;
 }
 /* instagram*/
 .containerOne:hover {

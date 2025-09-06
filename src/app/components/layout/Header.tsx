@@ -7,6 +7,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Button } from '../ui/Button';
 import SocialLinks from '../ui/SocialLinks';
+import Image from 'next/image';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ function Header() {
   return (
     <Navbar key={'lg'} expand={'lg'} className="bg-body-tertiary" fixed="top" style={{height: '8vh', boxShadow: 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px'}}>
       <Container fluid>
-        <Navbar.Brand href="#" className='fw-bold'>Eduardo Vilela &lt;/&gt;</Navbar.Brand>
+        <Navbar.Brand href="#" className='fw-bold'>Eduardo Vilela &lt;/&gt; </Navbar.Brand>
         <Navbar.Toggle onClick={() => setIsMenuOpen(!isMenuOpen)} />
         {isMobile ?(
         <AnimatePresence>
@@ -167,9 +168,6 @@ function Header() {
           placement="end"
         >
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${'lg'}`}>
-              Offcanvas
-            </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">

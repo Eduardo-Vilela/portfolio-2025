@@ -50,7 +50,10 @@ function Skills() {
             spaceBetween={20}
             centeredSlides={true}
             loop={true}
-            navigation={true}
+            navigation={{
+              prevEl: '.swiper-button-prev-custom',
+              nextEl: '.swiper-button-next-custom',
+            }}
             slidesPerView={'auto'}
             initialSlide={2}
             autoplay={{
@@ -85,6 +88,12 @@ function Skills() {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className="swiper-button-prev-custom">
+            <span>&lt;</span>
+          </div>
+          <div className="swiper-button-next-custom">
+            <span>&gt;</span>
+          </div>
         </Col>
       </Container>
     </div>
